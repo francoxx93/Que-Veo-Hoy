@@ -169,8 +169,8 @@ function infoPelicula(req, res) {
     conexionBaseDeDatos.query(consultaActores, function (error, pelicula1, fields) {
         actores = pelicula1;
     });
-
-    //Consulta info a la base de datos sobre tabla pelicula y genero 
+    
+    //Consulta info a la base de datos sobre tabla pelicula y genero. 
     var peliculaYgenero = `select titulo, duracion, director,  anio, poster, trama, fecha_lanzamiento, puntuacion, nombre 
     from pelicula 
     join genero 
